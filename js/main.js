@@ -23,11 +23,12 @@ inputType = parseInt(prompt("Ingrese el tipo de entrada que desea añadir al cue
 function MC1() {
     HTML = HTML + "<h3>" + prompt("Ingrese el título de la sección del cuestionario") + "</h3> \n"
     let valor = "";
-    valor = prompt("Ingrese el texto de la primera opción");
+    let i = 1;
+    valor = prompt("Ingrese el texto de la opción" + i);
     while (valor != null) {
 
         HTML = HTML + "<input type='radio' value='" + valor + "'>" + valor + " <br> \n"
-        valor = prompt("Ingrese el texto de la primera opción");
+        valor = prompt("Ingrese el texto de la opción " + i);
     }
 
     alert(HTML);
@@ -36,11 +37,12 @@ function MC1() {
 function MC2() {
     HTML = HTML + "<h3>" + prompt("Ingrese el título de la sección del cuestionario") + "</h3> \n"
     let valor = "";
+    let i = 1;
     valor = prompt("Ingrese el texto de la primera opción");
     while (valor != null) {
 
         HTML = HTML + "<input type='checkbox' value='" + valor + "'>" + valor + " <br> \n"
-        valor = prompt("Ingrese el texto de la primera opción");
+        valor = prompt("Ingrese el texto de la opción " + i);
     }
 
     alert(HTML);
@@ -51,7 +53,7 @@ function Textfield() {
     let valor = "";
 
     HTML = HTML + "<input type='textfield' value='" + valor + "'>" + valor + " <br> \n"
-    valor = prompt("Ingrese el texto de la primera opción");
+    valor = prompt("Ingrese el texto");
 
     alert(HTML);
 }
