@@ -10,11 +10,6 @@ class cuestionarioSubsection {
         this.questions = questions;
     }
 
-    constructor(type,title){
-        this.type = type;
-        this.title = title;
-    }
-
 }
 
 let cuestionarioSubsections = [];
@@ -34,7 +29,7 @@ while (inputType != NaN) {
         default:
             break;
     }
-    inputType = parseInt(prompt("Ingrese el tipo de entrada que desea añadir al cuestionario(escribir el número correspondiente): \n 1-Multiple choice sin repetición \n 2-Multiple choice con repetición \n 3-Textfield"));
+    inputType = parseInt(prompt("Ingrese el tipo de entrada que desea añadir al cuestionario(escribir el número correspondiente): \n 1-Multiple choice sin repetición \n 2-Multiple choice con repetición \n 3-Textfield \n cancelar-salir del bucle"));
     console.log(inputType);
 }
 
@@ -81,11 +76,11 @@ function Textfield() {
     HTML = HTML + "<h3>" + title + "</h3> \n"
     let value = "";
 
-    cuestionarioSubsections.push(new cuestionarioSubsection("MC1", title));
+    cuestionarioSubsections.push(new cuestionarioSubsection("MC1", title, null));
     console.log(cuestionarioSubsections);
 
 
-    HTML = HTML + "<input type='textfield' value='" + value + "'>" + value + " <br> \n"
+    HTML = HTML + "<input type='textfield' value='" + title + "'>" + title + " <br> \n"
     value = prompt("Ingrese el texto");
 
     alert(HTML);
