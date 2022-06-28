@@ -15,7 +15,7 @@ class cuestionarioSubsection {
 let cuestionarioSubsections = [];
 
 inputType = parseInt(prompt("Ingrese el tipo de entrada que desea añadir al cuestionario(escribir el número correspondiente): \n 1-Multiple choice sin repetición \n 2-Multiple choice con repetición \n 3-Textfield \n cancelar-salir del bucle"));
-while (inputType != NaN) {
+while (inputType !== NaN) {
     switch (inputType) {
         case 1:
             MC1();
@@ -41,7 +41,7 @@ function MC1() {
     let i = 1;
     let values = [];
     value = prompt("Ingrese el texto de la opción" + i);
-    while (value != null) {
+    while (value !== null) {
         i++
         values.push(value);
         HTML = HTML + "<input type='radio' value='" + value + "'>" + value + " <br> \n"
@@ -80,7 +80,8 @@ function Textfield() {
     console.log(cuestionarioSubsections);
 
 
-    HTML = HTML + "<input type='textfield' value='" + title + "'>" + title + " <br> \n"
+    HTML = HTML + "<input type='textfield' value='" + title + "'>" + title
+     + " <br> \n"
     value = prompt("Ingrese el texto");
 
     alert(HTML);
